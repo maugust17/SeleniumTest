@@ -34,7 +34,7 @@ public class Busqueda {
 		options.addArguments("headless");
 		options.addArguments("disable-gpu");
 		driver = new ChromeDriver(options);
-		*/String browser = "Chrome";
+		/*String browser = "Chrome";
 		if (browser.compareTo("Chrome") == 0)
 			driver = new ChromeDriver();
 		else if (browser.compareTo("Edge") == 0)
