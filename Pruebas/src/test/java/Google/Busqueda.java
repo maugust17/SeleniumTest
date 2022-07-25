@@ -30,14 +30,18 @@ public class Busqueda {
 
 	@BeforeMethod
 	public void beforeMethod() {
-		String browser = "Chrome";
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("headless");
+		options.addArguments("disable-gpu");
+		driver = new ChromeDriver(options);
+		*/String browser = "Chrome";
 		if (browser.compareTo("Chrome") == 0)
 			driver = new ChromeDriver();
 		else if (browser.compareTo("Edge") == 0)
 			driver = new EdgeDriver();
 		else if (browser.compareTo("Firefox") == 0)
 			driver = new FirefoxDriver();
-
+		*/
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
 		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(120));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(120));
