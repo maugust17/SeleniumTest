@@ -35,6 +35,8 @@ public class Busqueda {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("headless");
 		options.addArguments("disable-gpu");
+		options.addArguments("no-sandbox");
+		options.addArguments("disable-dev-shm-usage");
 		driver = new ChromeDriver(options);
 		/*String browser = "Chrome";
 		if (browser.compareTo("Chrome") == 0)
